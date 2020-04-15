@@ -2,14 +2,15 @@ package main
 
 import "fmt"
 
+var helloDict = map[string]string{"": "Hello", "French": "Bonjour", "Spanish": "Hola"}
+
 func Hello(name string, language string) string {
+
   if name == "" {
     name = "World"
   }
-  if language == "Spanish" {
-    return "Hola, " + name
-  }
-  return "Hello, " + name
+
+  return helloDict[language] + ", " + name
 }
 
 func main() {
